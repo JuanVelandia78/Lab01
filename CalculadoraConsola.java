@@ -20,7 +20,7 @@ public class CalculadoraConsola {
 
         while (continuar) {
             System.out.println("Resultado actual: " + resultado);
-            System.out.println("");
+            
             String input = scanner.nextLine().toLowerCase().trim();
 
             if (input.equalsIgnoreCase("salir")) {

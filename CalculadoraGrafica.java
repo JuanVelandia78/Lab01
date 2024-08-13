@@ -7,8 +7,9 @@ package ej02;
  */
 public class CalculadoraGrafica extends javax.swing.JFrame {
 
-    double numero1, numero2,resultado;
-        String operador;
+    double numero1, numero2;
+    double resultado = 0.0;
+    String operador;
 
     public CalculadoraGrafica() {
         initComponents();
@@ -183,7 +184,7 @@ public class CalculadoraGrafica extends javax.swing.JFrame {
             }
         });
 
-        bttntangente.setText("Tang");
+        bttntangente.setText("Tan");
         bttntangente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bttntangenteActionPerformed(evt);
@@ -363,10 +364,19 @@ public class CalculadoraGrafica extends javax.swing.JFrame {
                                 }
                                 txtPantalla.setText(Double.toString(resultado));
                             }
-                            else{
-
+                            if(operador.equals("sin")){
+                                resultado = Math.sin(Math.toRadians(numero2));
+                                txtPantalla.setText(Double.toString(resultado));                                                                                               
                             }
-                        }
+                            else if(operador.equals("cos")){
+                                resultado = Math.cos(Math.toRadians(numero2));
+                                txtPantalla.setText(Double.toString(resultado));  
+                                }
+                            else if(operador.equals("tan")){
+                                resultado = Math.tan(Math.toRadians(numero2));
+                                txtPantalla.setText(Double.toString(resultado));  
+}
+                            }
                     }
                 }
             }
@@ -457,6 +467,9 @@ public class CalculadoraGrafica extends javax.swing.JFrame {
 
     private void bttnsenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnsenoActionPerformed
         // TODO add your handling code here:
+         numero1 = Double.parseDouble(txtPantalla.getText());
+        txtPantalla.setText("");
+        operador = "sin";
     }//GEN-LAST:event_bttnsenoActionPerformed
 
     private void bttnsieteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnsieteActionPerformed
@@ -466,6 +479,9 @@ public class CalculadoraGrafica extends javax.swing.JFrame {
 
     private void bttncosenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttncosenoActionPerformed
         // TODO add your handling code here:
+        numero1 = Double.parseDouble(txtPantalla.getText());
+        txtPantalla.setText("");
+        operador = "cos";
     }//GEN-LAST:event_bttncosenoActionPerformed
 
     private void bttnochoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnochoActionPerformed
@@ -475,6 +491,9 @@ public class CalculadoraGrafica extends javax.swing.JFrame {
 
     private void bttntangenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttntangenteActionPerformed
         // TODO add your handling code here:
+        numero1 = Double.parseDouble(txtPantalla.getText());
+        txtPantalla.setText("");
+        operador = "tan";
     }//GEN-LAST:event_bttntangenteActionPerformed
 
     private void bttnnueveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnnueveActionPerformed

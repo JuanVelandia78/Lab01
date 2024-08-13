@@ -316,7 +316,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="bttntangente">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Tang"/>
+        <Property name="text" type="java.lang.String" value="Tan"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bttntangenteActionPerformed"/>

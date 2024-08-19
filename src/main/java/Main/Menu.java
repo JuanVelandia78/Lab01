@@ -1,5 +1,4 @@
 package Main;
-
 import ej01.CalculadoraConsola;
 import ej02.CalculadoraGrafica;
 import javax.swing.*;
@@ -23,7 +22,7 @@ public class Menu {
         // Crear el marco de la ventana
         frame = new JFrame(titulo);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //frame.setLocationRelativeTo(null);
+        frame.setLocationRelativeTo(null);
         frame.setSize(400, 50 * numop);
         frame.setLayout(new BorderLayout());
 
@@ -48,6 +47,8 @@ public class Menu {
                         case 1:
                             botones[index].setEnabled(!botones[index].isEnabled());
                             new CalculadoraGrafica().setVisible(true);
+                        case 2:
+                            System.out.println("Tercera opcion");
                     }
                     // *** FINAL AJUSTES ***
                 }
